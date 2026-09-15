@@ -1,13 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carleano Chang - Portfolio</title>
+</head>
+<body>
+
+  <!-- 1. Sticky Navbar (含捲動縮放、當前位置高亮指示燈) -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Carleano Chang</a>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#featured-video" class="nav-link">Demo</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 2. Hero 區塊 (全寬橫條、垂直置中、固定背景圖、CSS3 動畫) -->
+  <section id="hero" class="stripe hero-section">
+    <div class="hero-content v-center">
+      <h1 class="hero-title animate-fade-in">Hi, I'm Carleano Chang</h1>
+      <p class="hero-subtitle animate-fade-in">Master in Computer Science @ UIUC | Software Engineer</p>
+      <a href="#projects" class="hero-btn animate-fade-in">View My Work</a>
+    </div>
+  </section>
+
+  <!-- 3. 經歷 (Multi-column: 3 欄排版 + 彈窗 Modal 觸發) -->
+  <section id="experience" class="stripe experience-section">
+    <div class="stripe-container">
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-desc">Practical engineering experience across high-scale distributed systems, mobile UI, and cloud testing.</p>
+      
+      <div class="multi-column-grid">
+        <!-- 欄位 1: TSMC -->
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2H4V6zm0 5h16v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7zm4 3h2v2H8v-2zm4 0h4v2h-4v-2z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">TSMC</h3>
+          <p class="card-role">Software Engineer Intern</p>
+          <p class="card-timeline">June 2026 – August 2026</p>
+          <p class="card-summary">Agentic SRE platform backend with Java Spring Boot, MongoDB, and Prometheus.</p>
+          <button class="modal-trigger-btn" data-modal="modal-tsmc">View Details</button>
+        </div>
+
+
+
+        <!-- 欄位 2: CloudMile -->
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">CloudMile</h3>
+          <p class="card-role">Software Engineer Intern</p>
+          <p class="card-timeline">March 2025 – July 2025</p>
+          <p class="card-summary">Automated testing architecture with Cypress, lifting test coverage to 90%.</p>
+          <button class="modal-trigger-btn" data-modal="modal-cloudmile">View Details</button>
+        </div>
+
+        <!-- 欄位 3: Garmin -->
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14zm-5 2c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Garmin</h3>
+          <p class="card-role">Software Engineer Intern</p>
+          <p class="card-timeline">July 2023 – May 2024</p>
+          <p class="card-summary">Garmin Golf App (GGA) 3.0 UI components for 1M+ active users using Kotlin & Jetpack Compose.</p>
+          <button class="modal-trigger-btn" data-modal="modal-garmin">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 影片展示 (HTML5 Video Tag) -->
+  <section id="featured-video" class="stripe video-section">
+    <div class="stripe-container">
+      <h2 class="section-title">Project Video Demonstration</h2>
+      <p class="section-desc">Dual-annotator pipeline & multimodal crowd energy feature extraction.</p>
+      <div class="video-container">
+        <video controls class="html5-video" preload="metadata">
+          <source src="./assets/CS441demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 輪播專案 (Carousel: 3 Slides + 左右按鈕) -->
+  <section id="projects" class="stripe carousel-section">
+    <div class="stripe-container">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="carousel">
+        <button class="carousel-control prev" aria-label="Previous Slide">
+          <svg viewBox="0 0 24 24" class="arrow-svg"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+              <div class="slide-card">
+                <h3>Crowd Energy Detection</h3>
+                <p class="tech-stack">Python | Scikit-learn | OpenCV | FFmpeg</p>
+                <p>Automated pipeline extracting multimodal features (Audio RMS, Optical Flow, Pose) to predict video excitement. Beat rule-based baseline by 62.5%.</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="slide-card">
+                <h3>Algorithmic Trading & Price Prediction</h3>
+                <p class="tech-stack">Python | Keras | Financial Engineering</p>
+                <p>Bollinger Bands strategy with custom ATR stop-loss/take-profit, ranked Top 20 in Taiwan Futures Exchange Mock Competition.</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+              <div class="slide-card">
+                <h3>Agentic SRE Platform</h3>
+                <p class="tech-stack">Java Spring Boot | MongoDB | Prometheus</p>
+                <p>Architected backend service integrating intelligent anomaly alerts and dynamic metrics monitoring, reducing MTTM by 10%.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control next" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24" class="arrow-svg"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Footer (純 SVG 向量圖標 + 置中) -->
+  <footer id="contact" class="stripe footer-section">
+    <div class="stripe-container">
+      <h2 class="section-title">Connect With Me</h2>
+      <p class="footer-desc">Feel free to reach out for collaborations or opportunities!</p>
+      
+      <div class="social-icons">
+        <a href="https://github.com/Car1eano" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg class="svg-social" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <a href="https://linkedin.com/in/carleanochang" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg class="svg-social" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <a href="javascript:void(0)" id="email-copy-btn" class="social-link" aria-label="Copy Email">
+            <svg class="svg-social" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+        </a>
+      </div>
+
+      <p class="copyright">© 2026 Carleano Chang. Built for CS 409 MP1.</p>
+    </div>
+  </footer>
+
+  <!-- Modal 彈窗結構 -->
+  <div id="modal-tsmc" class="modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <h3>TSMC - Software Engineer Intern</h3>
+      <p class="modal-subtitle">AI Application Integration | June – Aug 2026</p>
+      <ul>
+        <li>Designed & implemented backend for Agentic SRE monitoring platform using Java Spring Boot (Controller-Service-DAO).</li>
+        <li>Unified integration for MongoDB, Prometheus, and internal AI prediction APIs.</li>
+        <li>Built dynamic monitoring & alerting for 100 internal users, reducing MTTM by 10%.</li>
+        <li>Adopted Spec-Kit for spec-driven development, cutting planning time by 50%.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-garmin" class="modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <h3>Garmin - Garmin Golf App Team</h3>
+      <p class="modal-subtitle">Software Engineer Intern | July 2023 – May 2024</p>
+      <ul>
+        <li>Built interactive UI components in Jetpack Compose for GGA 3.0 (1M+ active users).</li>
+        <li>Developed real-time scoring leaderboards and gaming cards.</li>
+        <li>Refactored 10+ functions into reusable components, reducing code redundancy by 13%.</li>
+        <li>Participated in 20+ code reviews across an agile international team of 10+ engineers.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modal-cloudmile" class="modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <h3>CloudMile - Product Team</h3>
+      <p class="modal-subtitle">Software Engineer Intern | March – July 2025</p>
+      <ul>
+        <li>Designed & executed 800+ test cases for MileLync and Lumiture.ai SaaS products.</li>
+        <li>Introduced Cypress to Lumiture.ai, driving test coverage to 90% and cutting QA time by 70%.</li>
+        <li>Coordinated across 5+ cross-functional roles to clarify edge cases for 1,200+ companies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal 背景遮罩 -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div id="toast" class="toast">Email copied to clipboard!</div>
+</body>
 </html>
